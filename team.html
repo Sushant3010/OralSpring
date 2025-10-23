@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oral Health Care | Our Team</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">Oral<span>Spring</span></div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="team.html" class="active">Our Team</a></li>
+          <li><a href="product.html">Our App</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="team">
+      <h2 data-aos="fade-up">Meet Our Team</h2>
+
+      <!-- member 1 -->
+      <div class="team-container">
+        <div class="team-card" data-aos="zoom-in" data-name="rajesh">
+          <img
+            src="https://images.crunchbase.com/image/upload/c_thumb,h_170,w_170,f_auto,g_face,z_0.7,b_white,q_auto:eco,dpr_2/z5a3glh0fpntfwrdxea5?ik-sanitizeSvg=true"
+            alt="Rajesh Jaiswal"
+          />
+          <h3>Rajesh Jaiswal</h3>
+        </div>
+
+        <!-- member 2 -->
+        <div class="team-card" data-aos="zoom-in" data-name="abhilash">
+          <img
+            src="https://oamrs.org/images/Headshots/Abhilash-Rakkunedeth-Hareendranathan%20headshot.png"
+            alt="Abhilash Hareendranathan"
+          />
+          <h3>Abhilash Hareendranathan</h3>
+        </div>
+
+        <!-- member 3 -->
+        <div class="team-card" data-aos="zoom-in" data-name="pallavi">
+          <img
+            src="https://i.postimg.cc/Mpdj96k7/Screenshot-2025-10-23-234628.png"
+            alt="Pallavi Ratra"
+          />
+          <h3>Pallavi Ratra</h3>
+        </div>
+        <!-- member 4 -->
+        <div class="team-card" data-aos="zoom-in" data-name="shammy">
+          <img
+            src="https://i.postimg.cc/QM7hHmqQ/Screenshot-2025-10-24-000252.png"
+            alt="Shammy Raj"
+          />
+          <h3>Shammy Raj</h3>
+        </div>
+
+        <!-- member 5 -->
+        <div class="team-card" data-aos="zoom-in" data-name="sushant">
+          <img
+            src="https://i.postimg.cc/sxqTQYmD/Screenshot-2025-10-24-000508.png"
+            alt="Sushant Ambastha"
+          />
+          <h3>Sushant Ambastha</h3>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal" id="teamModal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-info">
+          <img id="modal-img" src="" alt="Team Member" />
+          <div class="modal-text">
+            <h3 id="modal-name"></h3>
+            <p id="modal-role"></p>
+            <p id="modal-desc"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="contact-section" id="contact">
+      <h2>Contact Us</h2>
+      <p>
+        Have a dental concern or need a consultation? Reach out to us below!
+      </p>
+
+      <form
+        action="https://formspree.io/f/mdkwqovk"
+        method="POST"
+        class="contact-form"
+      >
+        <div class="form-group">
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Full Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required />
+        </div>
+        <div class="form-group">
+          <input type="tel" name="phone" placeholder="Phone Number" required />
+        </div>
+        <div class="form-group">
+          <textarea
+            name="message"
+            rows="4"
+            placeholder="Describe your concern or appointment request"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send Request</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>© 2025 OralSpring | All rights reserved</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
