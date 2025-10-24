@@ -15,6 +15,7 @@ window.addEventListener("scroll", () => {
   if (window.scrollY > 50) body.classList.add("scrolled");
   else body.classList.remove("scrolled");
 });
+
 // TEAM MODAL LOGIC
 const modal = document.getElementById("teamModal");
 const modalImg = document.getElementById("modal-img");
@@ -75,3 +76,18 @@ closeBtn.addEventListener("click", () => (modal.style.display = "none"));
 window.addEventListener("click", (e) => {
   if (e.target === modal) modal.style.display = "none";
 });
+// Scroll reveal for text tiles
+const tiles = document.querySelectorAll(".tile");
+
+const revealOnScroll = () => {
+  const triggerBottom = window.innerHeight * 0.8;
+  tiles.forEach((tile) => {
+    const tileTop = tile.getBoundingClientRect().top;
+    if (tileTop < triggerBottom) {
+      tile.classList.add("visible");
+    }
+  });
+};
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
