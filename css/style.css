@@ -117,13 +117,25 @@ body.scrolled .navbar {
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #4ab7a7;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #92d18b;
+  letter-spacing: 1px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
 }
 
 .logo span {
-  color: #00b8c4;
+  color: #6ac0b3;
 }
 
 .nav-links {
@@ -154,18 +166,26 @@ body.scrolled .navbar {
 }
 
 .hero-content {
-  max-width: 600px;
+  max-width: 100%;
+  text-align: center; /* Centers inline elements like the button */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ensures button and text are centered horizontally */
+  justify-content: center;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
   margin-bottom: 20px;
   text-shadow: 0px 3px 8px rgba(76, 175, 150, 0.25);
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 6vw;
 }
 
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .btn {
@@ -178,17 +198,13 @@ body.scrolled .navbar {
   color: #fff;
   border: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  margin: 0 auto;
 }
 
 .btn:hover {
   background: linear-gradient(135deg, #0288d1, #03a9f4);
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(128, 222, 234, 0.4);
-}
-
-.hero-image {
-  width: 400px;
-  animation: none;
 }
 
 @keyframes float {
