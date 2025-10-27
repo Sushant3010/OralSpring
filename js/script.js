@@ -35,13 +35,13 @@ const teamData = {
     name: "Abhilash Hareendranathan",
     role: "",
     img: "https://oamrs.org/images/Headshots/Abhilash-Rakkunedeth-Hareendranathan%20headshot.png",
-    desc: "Abhilash is an Assistant Professor in the Faculty of Medicine & Dentistry - Radiology & Diagnostic Imaging Dept. at the University of Alberta. He heads the research and development at Oral Spring. With an expertise in artificial intelligence (AI), medical image analysis and ultrasound imaging, Abhilash aims to add innovative, state of the art technology to the platform. ",
+    desc: "Abhilash is an Assistant Professor in the Faculty of Medicine & Dentistry - Radiology & Diagnostic Imaging Dept. at the University of Alberta. He heads the research and development at Oral Spring. With an expertise in artificial intelligence (AI), medical image analysis and ultrasound imaging, Abhilash adds innovative, state of the art technology to the platform. ",
   },
   pallavi: {
     name: "Pallavi Ratra",
     role: "",
     img: "https://i.postimg.cc/Mpdj96k7/Screenshot-2025-10-23-234628.png",
-    desc: "Pallavi leads the marketing initiatives at Oral Spring. She brings in a wealth of experience in peoples management, cross functional leadership and data driven strategies. She will head the promotion of Oral Spring’s products and drive awareness initiatives",
+    desc: "Pallavi leads the marketing initiatives at Oral Spring. She brings in a wealth of experience in peoples management, cross functional leadership and data driven strategies. She heads the promotion of Oral Spring’s products and drives awareness initiatives.",
   },
 
   shammy: {

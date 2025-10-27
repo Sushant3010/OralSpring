@@ -10,6 +10,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link
+      rel="apple-touch-icon"
+      href="https://i.postimg.cc/pXc60HVV/Chat-GPT-Image-Oct-25-2025-12-22-03-AM-removebg-preview.png"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://i.postimg.cc/pXc60HVV/Chat-GPT-Image-Oct-25-2025-12-22-03-AM-removebg-preview.png"
+      type="image/png"
+    />
   </head>
   <body>
     <div class="floating-icons">
@@ -38,16 +47,16 @@
       <nav class="navbar">
         <div class="logo-container">
           <img
-            src="https://i.postimg.cc/0yKSYfhY/Chat-GPT-Image-Oct-25-2025-12-22-03-AM.png"
+            src="https://i.postimg.cc/pXc60HVV/Chat-GPT-Image-Oct-25-2025-12-22-03-AM-removebg-preview.png"
             alt="Oral Spring Logo"
             class="logo-img"
           />
-          <div class="logo">Oral<span>Spring</span></div>
+          <div class="logo">Oral<span> Spring</span></div>
         </div>
         <ul class="nav-links">
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="team.html">Our Team</a></li>
-          <li><a href="product.html">Our App</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="product.html">Technology</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -56,13 +65,12 @@
 
     <section class="hero">
       <div class="hero-content" data-aos="fade-up">
-        <h1>Bright Smiles, Healthy Lives</h1>
+        <h1>Oral health, monitored for confidence</h1>
         <p>Empowering oral health through smart, modern solutions.</p>
         <a href="team.html" class="btn">Meet Our Team</a>
       </div>
     </section>
     <section class="scroll-tiles">
-      <h2 data-aos="fade-up">Discover the Essence of OralSpring</h2>
       <div class="tiles-container">
         <div class="tile" data-aos="fade-up">
           <p>Oral disease affects half of world’s population.</p>
@@ -73,7 +81,10 @@
         </div>
 
         <div class="tile" data-aos="fade-up">
-          <p>Causes pain and discomfort.</p>
+          <p>
+            1 billion higher cases than combined cases of next 5 non
+            communicable diseases.
+          </p>
         </div>
 
         <div class="tile" data-aos="fade-up">
@@ -85,6 +96,24 @@
         <div class="tile" data-aos="fade-up">
           <p>Adds US$ 500 billion annually to economic burden.</p>
         </div>
+      </div>
+
+      <div class="image-stack" data-aos="fade-left">
+        <img
+          src="https://i.postimg.cc/NjkFmpkM/Screenshot-2025-10-27-121540-1.png"
+          alt="Graph 1"
+          class="stack-img img1"
+        />
+        <img
+          src="https://i.postimg.cc/9M7jtfHX/Screenshot-2025-10-27-121556.png"
+          alt="Graph 2"
+          class="stack-img img2"
+        />
+        <img
+          src="https://i.postimg.cc/0jN0VBHj/Screenshot-2025-10-27-201826-pica-1.png"
+          alt="Graph 2"
+          class="stack-img img3"
+        />
       </div>
     </section>
 
@@ -98,6 +127,9 @@
         enhancing existing oral health care systems and improving overall
         outcomes.
       </p>
+      <div class="about-links">
+        <a href="product.html" class="btn">Technology</a>
+      </div>
     </section>
     <section class="facts-section" data-aos="fade-up">
       <h2>Did You Know?</h2>
@@ -134,7 +166,23 @@
     <footer>
       <p>© 2025 OralSpring | All rights reserved</p>
     </footer>
+    <script>
+      // Detect if the device supports touch
+      if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
+        const images = document.querySelectorAll(".stack-img");
 
+        images.forEach((img) => {
+          img.addEventListener("click", () => {
+            // If any image is already zoomed, reset it first
+            const zoomed = document.querySelector(".stack-img.zoomed");
+            if (zoomed && zoomed !== img) zoomed.classList.remove("zoomed");
+
+            // Toggle zoom on the tapped image
+            img.classList.toggle("zoomed");
+          });
+        });
+      }
+    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
   </body>
