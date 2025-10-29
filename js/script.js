@@ -17,6 +17,7 @@ window.addEventListener("scroll", () => {
 });
 
 // TEAM MODAL LOGIC
+
 const modal = document.getElementById("teamModal");
 const modalImg = document.getElementById("modal-img");
 const modalName = document.getElementById("modal-name");
@@ -43,14 +44,12 @@ const teamData = {
     img: "https://i.postimg.cc/Mpdj96k7/Screenshot-2025-10-23-234628.png",
     desc: "Pallavi leads the marketing initiatives at Oral Spring. She brings in a wealth of experience in peoples management, cross functional leadership and data driven strategies. She heads the promotion of Oral Spring’s products and drives awareness initiatives.",
   },
-
   shammy: {
     name: "Shammy Raj",
     role: "",
     img: "https://i.postimg.cc/QM7hHmqQ/Screenshot-2025-10-24-000252.png",
     desc: "Shammy is the Product Lead at the Oral Spring. With extensive experience in biomedical innovation and a passion for innovative healthcare technologies, Shammy drives feature identification, market validation and product development. ",
   },
-
   sushant: {
     name: "Sushant Ambastha",
     role: "",
@@ -59,23 +58,54 @@ const teamData = {
   },
 };
 
-// Open modal on card click
-document.querySelectorAll(".team-card").forEach((card) => {
-  card.addEventListener("click", () => {
-    const member = teamData[card.dataset.name];
+let hoverTimer;
+let isModalOpen = false;
+const HOVER_DELAY = 500;
+
+function openMemberModal(card) {
+  if (isModalOpen) return; // Don't open if already open
+  isModalOpen = true;
+
+  const member = teamData[card.dataset.name];
+  if (member) {
     modalImg.src = member.img;
     modalName.textContent = member.name;
     modalRole.textContent = member.role;
     modalDesc.textContent = member.desc;
     modal.style.display = "flex";
+  }
+}
+
+function closeMemberModal() {
+  modal.style.display = "none";
+  isModalOpen = false;
+}
+
+document.querySelectorAll(".team-card").forEach((card) => {
+  card.addEventListener("click", () => {
+    clearTimeout(hoverTimer);
+    openMemberModal(card);
+  });
+
+  card.addEventListener("mouseenter", () => {
+    hoverTimer = setTimeout(() => {
+      openMemberModal(card);
+    }, HOVER_DELAY);
+  });
+
+  card.addEventListener("mouseleave", () => {
+    clearTimeout(hoverTimer);
   });
 });
 
-// Close modal
-closeBtn.addEventListener("click", () => (modal.style.display = "none"));
+closeBtn.addEventListener("click", closeMemberModal);
 window.addEventListener("click", (e) => {
-  if (e.target === modal) modal.style.display = "none";
+  if (e.target === modal) {
+    closeMemberModal();
+  }
 });
+modal.addEventListener("mouseleave", closeMemberModal);
+
 // Scroll reveal for text tiles
 const tiles = document.querySelectorAll(".tile");
 
